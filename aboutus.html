@@ -1,0 +1,595 @@
+<!doctype html>
+<html class="js">
+<head>
+    <meta charset="utf-8">
+    <title>SAMIN</title>
+    <link rel="stylesheet" href="stylesheets/normalize1.css">
+    <link rel="stylesheet" href="stylesheets/aboutus.css">
+    <link rel="stylesheet" href="stylesheets/headhesive1.css">
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/didact-gothic" type="text/css"/>
+</head>
+
+
+<body id="top">
+    <header class="banner">
+        <nav class="container">
+         
+
+    
+
+<a href="#" id="logo"><img src="saminlogo1.png"></a>
+
+    
+
+      <ul class="nav">
+     
+    <div class="demo"> 
+<li class="nav__item"><a href="index.html">HOME</a>
+<li class="nav__item"><a href="lessons.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BEGINNER <br>PRIVATE LESSONS</a>
+<li class="nav__item"><a href="guide.html">NEW RIDER'S<br>VIDEO GUIDE</a>
+<li class="nav__item"><a href="aboutus.html" style="color: #d8d8d8;">ABOUT US</a>
+<li class="nav__item"><a href="contact.html">CONTACT</a>  </div>
+
+</li>           </ul>
+        </nav>
+    </header>
+
+   
+
+<a id="showHere"></a>
+
+    <main role="main">
+        <div class="container">
+
+  
+
+               
+    <style>
+      body {
+        
+	margin: 0;
+        padding: 0;
+      }
+
+ ul { display:table; margin:0 auto;}
+
+      #headline {
+        padding: 0.8em;
+        color: white;
+        font-family: 'Didact Gothic', sans-serif;
+        background-color: rgba(0,0,0,0);
+        background-size: cover;
+	padding-left: 40px;
+            
+          }
+      }
+
+      #headline h1 {
+        font-weight: 200;
+	
+        font-size: 60px;
+        line-height: 1em;
+        margin-bottom: 0;	
+	
+      }
+        
+      #headline h2 {
+        font-weight: 200;
+        
+	font-size: 25px;
+	line-height: normal;
+        margin-top: 5px;
+	
+      }
+
+      #headline #blurb {
+        font-weight: 300;
+        
+	font-size: 18px;
+	
+	
+           
+      }
+
+      #headline #register {
+        background-color: #000000;
+        
+	background-color: rgba(0,0, 0, 0.7);
+        padding: 1em;
+	
+      }
+
+      #headline #register h2 {
+        font-weight: 100;
+        padding: 0;
+        margin: 0;
+      }
+
+      #headline #register label {
+        font-size: 1.2em;
+        font-weight: 200;
+        padding-top: 12px;
+        display: block;
+      }
+
+      #headline #register input {
+        width: 100%;
+        font-size: 18px;
+        color:#000000;
+	font-weight: 200;
+        padding: 30px;
+        box-sizing: border-box;
+      }
+
+      #headline #register input[type=submit] {
+        background-color: hsl(8, 70%, 54%);
+        color: white;
+        margin-top: 20px;
+        padding: 30px;
+        border: none;
+        box-sizing: border-box;
+        font-size: 18px;
+      }
+
+#footline {
+        padding: 0.8em;
+        color: white;
+        font-family: Roboto, helvetica, arial, sans-serif;
+        
+       
+        background-size: cover;
+      }
+
+      #footline h1 {
+        font-weight: 200;
+        font-size: 60px;
+        line-height: 1em;
+        margin-bottom: 0;
+      }
+        
+      #footline h2 {
+        font-weight: 200;
+        font-size: 30px;
+	line-height: normal;
+        margin-top: 5px;
+      }
+
+      #footline #blurb {
+        font-weight: 300;
+        font-size: 18px;
+      }
+
+      #footline #register {
+        background-color: #000000;
+        background-color: rgba(0,0,0, 0.7);
+        padding: 1em;
+      }
+
+      #footline #register h2 {
+        font-weight: 100;
+        font-size: 25px;
+padding: 0;
+        margin: 0;
+      }
+
+      #footline #register label {
+        font-size: 1.2em;
+        font-weight: 200;
+        padding-top: 12px;
+        display: block;
+      }
+
+      #footline #register input {
+        width: 100%;
+        font-size: 18px;
+	color:#000000;
+        font-weight: 200;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+
+      #footline #register input[type=submit] {
+        background-color: hsl(8, 70%, 54%);
+        color: white;
+        margin-top: 5px;
+        padding: 10px;
+        border: none;
+        box-sizing: border-box;
+        font-size: 18px;
+      }
+
+       #section1, #section2, #section3, #section4, #section5  {
+        box-sizing: border-box;
+        padding: 20px;
+      }
+
+      #section1 h2, #section2 h2, #section3 h2, #section4 h2, #section5 h2 {
+        margin-top: 0;
+        font-size: 24px
+      }
+
+      #section1 {
+        background-color: #000000;
+       
+        font-weight: 100;
+        font-size: 18px;
+	
+      }
+
+      #section1 h2 {
+        font-weight: 300;
+      
+	text-align: center;
+        margin-bottom: 0px;
+        margin-top: 20px;
+      }
+
+      #section1 h2 + p {
+      }
+
+      #section1 video {
+        width: 100%;
+      }
+
+      #section2 {
+        background-color: #e9e9e9;
+        font-family: 'Didact Gothic', sans-serif;
+        font-weight: 100;
+	text-align: center;
+	color:black;
+        font-size: 18px;
+	text-align: center;
+
+      }
+
+      #section2 h2 {
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 0px;
+        margin-top: 20px;
+      }
+
+      #section2 h2 + p {
+
+        text-align: center;
+      }
+
+      #section2 div {
+        text-align: center;
+	
+      }
+
+      #section2 div img {
+        
+width: 100%
+      }
+	
+
+    #section3 {
+        background-color: #e9e9e9;
+background-image: url(locations2.jpg);
+        font-family: 'Didact Gothic', sans-serif;
+        font-weight: 100;
+	 text-align: center;
+        font-size: 18px;
+      }
+
+      #section3 h2 {
+color:white;
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 0px;
+        margin-top: 20px;
+      }
+
+      #section3 h2 + p {
+color:white;
+        text-align: center;
+      }
+
+      #section3 figure {
+        text-align: center;
+      color:white;}
+
+      #section3 figure figcaption {color:white;
+        
+        font-weight: 400;
+      }
+
+#section4 {
+        background-color: white;
+        font-family: 'Didact Gothic', sans-serif;
+        font-weight: 100;
+        font-size: 18px;
+      }
+
+      #section4 h2 {
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 0px;
+        margin-top: 20px;
+      }
+
+      #section4 h2 + p {
+       text-align: center;
+      }
+
+      #section4 div {
+        text-align: center;
+      }
+
+      #section4 div img {
+        width: 100%
+      }
+
+
+
+ #section5 {
+        background-color: white;
+        font-family: 'Didact Gothic', sans-serif;
+        font-weight: 100;
+        font-size: 18px;
+      }
+
+      #section5 h2 {
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 0px;
+        margin-top: 20px;
+      }
+
+      #section5 h2 + p {
+      }
+
+      #section5 video {
+        width: 100%;
+      }
+
+      footer {
+        font-family: 'Didact Gothic', sans-serif;
+        font-weight: 300;
+	font-size: 9px;
+background-image: url(iphone2.jpg);
+background-repeat: no;
+        text-align: center;
+        padding-bottom: 20px;
+        padding-top: 25px;
+      }
+
+      table {
+        margin-top: 26px;
+        width: 100%;
+      }
+      thead {
+        font-weight: bold;
+      }
+
+      tbody {
+        text-align: center;
+      }
+
+      
+@media screen and (max-width: 600px) {
+        table thead {
+          display: none;
+        }
+
+        table td {
+          display: block;
+          position: relative;
+          padding-left: 50%;
+          padding-top: 13px;
+          padding-bottom: 13px;
+          text-align: left;
+          background: #e9e9e9;
+        }
+
+        table td:before {
+          content: attr(data-th) " :";
+          display: inline-block;
+          color: #000000;
+          background: #e9e9e9;
+          border-right: 2px solid transparent;
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          width: 33%;
+          max-height: 100%;
+
+          font-size: 16px;
+          font-weight: 300;
+          padding-left: 13px;
+          padding-top: 13px;
+        }
+      }
+      
+@media screen and (min-width: 600px) {
+          #headline {
+            font-size: 22px;
+	padding: 30px 1%;
+	padding-top: 30px;
+	padding-right: -20px;
+          }
+
+#footline {
+            padding: 1px 22%;
+          }
+          
+          .container {
+	font-family: 'Didact Gothic', sans-serif;
+            margin: auto;
+            max-width: 800px;
+          }
+
+          #headline #blurb {
+            
+            font-weight: 200;
+            width: 50%;
+            font-size: 18px;
+            font-family: 'Didact Gothic', sans-serif;
+	box-sizing: border-box;
+            padding-right: 20px;
+          }
+
+          #headline br {
+            clear: both;
+          }
+
+          #headline #register {
+            float:left;
+            font-family: 'Didact Gothic', sans-serif;
+	padding: 20px;
+            width: 50%;
+            box-sizing: border-box;
+            font-weight: 300;
+          }
+          
+ #footline #blurb {
+            float: left; 
+            font-weight: 200;
+	font-family: 'Didact Gothic', sans-serif;
+            width: 50%;
+            font-size: 18px;
+            box-sizing: border-box;
+            padding-right: 10px;
+          }
+
+          #footline br {
+            clear: both;
+          }
+
+          #footline #register {
+            float:left;
+            padding: 20px;
+		 margin-top: 56px;
+	font-family: 'Didact Gothic', sans-serif;
+            width: 50%;
+            box-sizing: border-box;
+            font-weight: 300;
+          }
+          
+
+           #section1 #section2, #section3, #section4, #section5   {
+            
+box-sizing: border-box;
+            padding: 10px 20% 80px 20%;
+          }
+          
+          #section1 h2, #section2 h2, #section3 h2, #section4 h2, #section5 h2   {
+            margin-top: 0;
+            font-size: 60px
+          }
+          
+          #section1 ul {
+            box-sizing: border-box;
+            float: left;
+            width: 50%;
+            padding-right: 1em;
+          }
+          
+          #section1 video {
+            box-sizing: border-box;
+            width: 50%;
+            float: right;
+          }
+
+          #section1 br {
+            clear: both;
+          }
+          
+          #section2 div img {
+            width: 30%;
+	margin: 1%;
+            box-sizing: border-box;
+            border-radius: 50% 50%;
+            box-shadow: black 0px 0px 5px;
+
+	
+
+ #section4 div img {
+            width: 30%;
+	
+            margin: 1%;
+            box-sizing: border-box;
+            border-radius: 50% 50%;
+            box-shadow: black 0px 0px 5px;
+       
+
+          }
+        }
+
+    </style>
+<body>
+<div id="headline">
+      
+        <header>
+          <h1>About Us</h1><br><br><br>
+          <p style="font-weight: italic; font-size: 30px; color:white;"><i>Our Mission</i> </p>
+        </header>
+        <div id="blurb">
+          <p>Getting into motorcycles isn't as simple as learning to drive. Our intent  is to help people have a smooth and easy transition into riding motorcycles. Many people are intimidated by the idea of riding a motorcycle itself and it certainly doesn't help that there isn't an easy way to learn.</p>
+          <p>This all started out as teaching some friends in a nearby empty parking lot and that's the atmosphere we strive to preserve. A laid back environment where you feel as if you're being taught by a friend. We have locations in New York and San Diego ultimately hope to expand to every major city across in America.</p>
+
+          
+        </div> <div id="headline">
+     
+        <br>
+      </div>
+    </div>
+    </div>
+
+<div id="section4">
+      <br>
+        <h2 style="color:black;">About the Owner</h2><br><br><br>
+        <p style="color:black;"> I grew up in NY and when I was in highschool I knew I wanted to do something different. I decided to move to California and saved up my pennies from my Taco Bell job so I could buy a motorcycle. The whole learning process was an absolute nightmare for me. I just moved to San Diego and didn't know anyone at all, let alone someone that could teach me to ride.</p>
+
+<p style="color:black;">But I didn't let that stop me. I went on Youtube, watched videos, and practiced on the bike I had already bought. I crashed the bike many times, hurt myself, and walked with a limp for a while. I smashed my legs making so many mistakes that could've easily been avoided if I had some guidance. But even though I did it the hard way, I eventually got it.</p>
+
+<p style="color:black;">Now I've been riding on a daily basis for years and its become a big part of what I enjoy doing. So many of my closest friends I met through riding and had I given up, I would have never met these guys. All I want to do is help people get into riding and avoid the struggles I went through. <br><br>P.S. If you come through in New York, I'll be the one teaching you.      </p>
+        <br>
+      </div>
+    </div>
+
+
+       </div>
+    </main>
+
+  <div id="section1">     <div class="container">
+  <center>         <center style="font-size: 12px;"> <a href="#"><img src="facebook.png"></a> &nbsp;&nbsp; <a href="#"><img src="instagram.png"></a><font color="white"><br>Copyright &copy; 2016 SAMIN, LLC | <a href="#"><font color="white">Terms of Use</a> | <a href="#"><font color="white">Privacy Policy</a></font> </center>    </div>    </div>
+    </footer>
+
+    <script type="text/javascript" src="../dist/headhesive.js"></script>
+    <script>
+
+        // Set options
+        var options = {
+            offset: '#showHere',
+            offsetSide: '.',
+            classes: {
+                clone:   'banner--clone',
+                stick:   'banner--stick',
+                unstick: 'banner--unstick'
+            }
+        };
+
+        // Initialise with options
+        var banner = new Headhesive('.banner', options);
+
+        // Headhesive destroy
+        // banner.destroy();
+    </script>
+	  
+	  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-85370015-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>
