@@ -50,6 +50,64 @@
                
     <style>
 	    
+	    body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+	    
+	    
+	    
 body {margin:0;}
 ul.topnav {
   list-style-type: none;
@@ -554,6 +612,15 @@ function myFunction() {
     }
 }
 </script>
+	<script>
+function openNav() {
+    document.getElementById("myNav").style.height = "100%";
+}
+
+function closeNav() {
+    document.getElementById("myNav").style.height = "0%";
+}
+</script>
 <div id="headline">
       
         <header>
@@ -561,7 +628,7 @@ function myFunction() {
           <h2><i>(Private, 1 on 1)</i> </h2>
         </header>
         <div id="blurb">
-          <p style="margin:auto;">Riding a motorcycle is dangerous. You can't ride if you're dead. The majority of accidents happen to new riders within a few weeks because they didn't learn to ride properly.  But dont let that scare you because riding is one of the most exhilirating experiences in the world. You will feel truly alive on a bike, experience adrenaline rushing through your veins, and enter into the tightknit community of riders. Learn how to ride safely and you will fall in love with motorcycles.</p>
+          <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span><p style="margin:auto;">Riding a motorcycle is dangerous. You can't ride if you're dead. The majority of accidents happen to new riders within a few weeks because they didn't learn to ride properly.  But dont let that scare you because riding is one of the most exhilirating experiences in the world. You will feel truly alive on a bike, experience adrenaline rushing through your veins, and enter into the tightknit community of riders. Learn how to ride safely and you will fall in love with motorcycles.</p>
           <p>These lessons are designed for people with ZERO experience with motorcycles. We not only teach you every technique you will need to know about riding, but also ensure that you are going about everything the right way in terms of licensing, your first motorcycle purchase, and proper gear for riding. We will guide you at every step along the way.</p>
 		
         </div> <div id="headline">
