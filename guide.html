@@ -2,6 +2,7 @@
 <html class="js">
 <head>
     <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width" />
     <title>SAMIN</title>
     <link rel="stylesheet" href="stylesheets/normalize1.css">
     <link rel="stylesheet" href="stylesheets/guide.css">
@@ -21,17 +22,19 @@
 
     
 
-      <ul class="nav">
+   <ul class="topnav" id="myTopnav">
      
     <div class="demo"> 
-<li class="nav__item"><a href="index.html">HOME</a>
-<li class="nav__item"><a href="lessons.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BEGINNER <br>PRIVATE LESSONS</a>
-<li class="nav__item"><a href="guide.html" style="color: #d8d8d8;">NEW RIDER'S<br>VIDEO GUIDE</a>
+	    <li class="econ"><li class="nav__item"><a href="index.html">HOME</a></li>
+<li class="nav__item"><a href="lessons.html" style="color: #d8d8d8;">BEGINNER <br>PRIVATE LESSONS</a>
+<li class="nav__item"><a href="guide.html">NEW RIDER'S<br>VIDEO GUIDE</a>
 <li class="nav__item"><a href="aboutus.html">ABOUT US</a>
 <li class="nav__item"><a href="contact.html">CONTACT</a>  </div>
 
-</li>
-
+    
+</div><p style="line-height:4px; font-size:4px; margin:0px; height:12px;">&nbsp;</p>
+</li> <li class="icon"> <span style="padding-top: 2px;font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;</span>
+		</li>
             </ul>
         </nav>
     </header>
@@ -47,25 +50,157 @@
 
                
     <style>
-      body {
-        
+	    
+	    body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s; line-height: .8em;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+	    
+	    
+	    
+body {margin:0;}
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 8px;
+  overflow: hidden;
+   
+}
+ul.topnav li {float: left;}
+ul.topnav li a {
+  display: inline-block;
+  color: #ffffff;
+  text-align: center;
+  padding: 0px 5px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 12px;
+}
+ul.topnav li a:hover {background-color: #555;}
+ul.topnav li.icon {display: none;}
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+	    
+	    ul.topnav li.econ {display: inline-block;}
+@media screen and (max-width:680px) {
+ 
+  ul.topnav li.econ {
+    
+    display: none;
+	}}}
+	
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+	    
+      html{font-size: 100%;}      
+@media  (min-width: 60em) { body {
+        font-size: 100%
 	margin: 0;
         padding: 0;
       }
-
- ul { display:table; margin:0 auto;}
-
+ 
+.myButton {
+	-moz-box-shadow:inset 0px 39px 0px -24px #e67a73;
+	-webkit-box-shadow:inset 0px 39px 0px -24px #e67a73;
+	box-shadow:inset 0px 39px 0px -24px #e67a73;
+	background-color:#e4685d;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:'Didact Gothic';
+	font-size:17px;
+	padding:9px 103px;
+	text-decoration:none;
+}
+.myButton:hover {
+	background-color:#eb675e;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
       #headline {
         padding: 0.8em;
         color: white;
         font-family: 'Didact Gothic', sans-serif;
         background-color: rgba(0,0,0,0);
+	      line-height: 1.2em;
         background-size: cover;
-	padding-left: 40px;
             
           }
       }
-
+      html{font-size: 180%; line-height: 1.2em}
+@media  (min-width: 60em) {
       #headline h1 {
         font-weight: 200;
 	
@@ -73,17 +208,23 @@
         line-height: 1em;
         margin-bottom: 0;	
 	
+      }}
+	
+	     #headline h1 {
+      line-height: 1em;	
+	
       }
+      
         
-      #headline h2 {
+  html{font-size: 100%}
+@media  (min-width: 60em) {   #headline h2 {
         font-weight: 200;
         
-	font-size: 25px;
+	font-size: 30px;
 	line-height: normal;
         margin-top: 5px;
 	
-      }
-
+      }}
       #headline #blurb {
         font-weight: 300;
         
@@ -92,47 +233,41 @@
 	
            
       }
-
       #headline #register {
         background-color: #000000;
-        
+        margin-top: 90px;
 	background-color: rgba(0,0, 0, 0.7);
         padding: 1em;
 	
       }
-
       #headline #register h2 {
         font-weight: 100;
-        padding: 0;
-        margin: 0;
+       font-size: 25px; padding: 0;
+        margin: auto;
       }
-
       #headline #register label {
-        font-size: 1.2em;
+        font-size: 0.8em;
         font-weight: 200;
         padding-top: 12px;
         display: block;
       }
-
       #headline #register input {
         width: 100%;
         font-size: 18px;
         color:#000000;
 	font-weight: 200;
-        padding: 30px;
+        padding: 10px;
         box-sizing: border-box;
       }
-
       #headline #register input[type=submit] {
         background-color: hsl(8, 70%, 54%);
         color: white;
         margin-top: 20px;
-        padding: 30px;
+        padding: 10px;
         border: none;
         box-sizing: border-box;
         font-size: 18px;
       }
-
 #footline {
         padding: 0.8em;
         color: white;
@@ -141,7 +276,6 @@
        
         background-size: cover;
       }
-
       #footline h1 {
         font-weight: 200;
         font-size: 60px;
@@ -155,32 +289,27 @@
 	line-height: normal;
         margin-top: 5px;
       }
-
       #footline #blurb {
         font-weight: 300;
         font-size: 18px;
       }
-
       #footline #register {
         background-color: #000000;
         background-color: rgba(0,0,0, 0.7);
         padding: 1em;
       }
-
       #footline #register h2 {
         font-weight: 100;
         font-size: 25px;
 padding: 0;
         margin: 0;
       }
-
       #footline #register label {
         font-size: 1.2em;
         font-weight: 200;
         padding-top: 12px;
         display: block;
       }
-
       #footline #register input {
         width: 100%;
         font-size: 18px;
@@ -189,27 +318,23 @@ padding: 0;
         padding: 10px;
         box-sizing: border-box;
       }
-
       #footline #register input[type=submit] {
         background-color: hsl(8, 70%, 54%);
         color: white;
-        margin-top: 5px;
+        margin-top: 10px;
         padding: 10px;
         border: none;
         box-sizing: border-box;
         font-size: 18px;
       }
-
        #section1, #section2, #section3, #section4, #section5  {
         box-sizing: border-box;
         padding: 20px;
       }
-
       #section1 h2, #section2 h2, #section3 h2, #section4 h2, #section5 h2 {
         margin-top: 0;
         font-size: 24px
       }
-
       #section1 {
         background-color: #000000;
        
@@ -217,7 +342,6 @@ padding: 0;
         font-size: 18px;
 	
       }
-
       #section1 h2 {
         font-weight: 300;
       
@@ -225,14 +349,11 @@ padding: 0;
         margin-bottom: 0px;
         margin-top: 20px;
       }
-
       #section1 h2 + p {
       }
-
       #section1 video {
         width: 100%;
       }
-
       #section2 {
         background-color: #e9e9e9;
         font-family: 'Didact Gothic', sans-serif;
@@ -241,41 +362,33 @@ padding: 0;
 	color:black;
         font-size: 18px;
 	text-align: center;
-
       }
-
       #section2 h2 {
         font-weight: 300;
         text-align: center;
         margin-bottom: 0px;
-        margin-top: 20px;
+        margin-top: 20px; line-height: .8em;
       }
-
       #section2 h2 + p {
-
         text-align: center;
       }
-
       #section2 div {
         text-align: center;
 	
       }
-
       #section2 div img {
         
 width: 100%
       }
 	
-
     #section3 {
         background-color: #e9e9e9;
-background-image: url(locations2.jpg);
+background-image: url(bothbikes7.jpg);
         font-family: 'Didact Gothic', sans-serif;
         font-weight: 100;
 	 text-align: center;
-        font-size: 18px;
+        font-size: 18px; line-height: 1.5em;
       }
-
       #section3 h2 {
 color:white;
         font-weight: 300;
@@ -283,81 +396,67 @@ color:white;
         margin-bottom: 0px;
         margin-top: 20px;
       }
-
       #section3 h2 + p {
 color:white;
         text-align: center;
       }
-
       #section3 figure {
         text-align: center;
       color:white;}
-
       #section3 figure figcaption {color:white;
         
         font-weight: 400;
       }
-
 #section4 {
         background-color: white;
         font-family: 'Didact Gothic', sans-serif;
         font-weight: 100;
         font-size: 18px;
       }
-
-      #section4 h2 {
+         
+ #section4 h2 {
         font-weight: 300;
-        text-align: center;
+       font-size: 60px; text-align: center;
         margin-bottom: 0px;
         margin-top: 20px;
-      }
-
+	 line-height: .8em;
+	}
       #section4 h2 + p {
        text-align: center;
       }
-
       #section4 div {
         text-align: center;
       }
-
       #section4 div img {
         width: 100%
       }
-
-
-
  #section5 {
         background-color: white;
         font-family: 'Didact Gothic', sans-serif;
         font-weight: 100;
         font-size: 18px;
       }
-
       #section5 h2 {
         font-weight: 300;
         text-align: center;
         margin-bottom: 0px;
         margin-top: 20px;
       }
-
       #section5 h2 + p {
       }
-
       #section5 video {
         width: 100%;
       }
-
       footer {
         font-family: 'Didact Gothic', sans-serif;
         font-weight: 300;
 	font-size: 9px;
-background-image: url(iphone2.jpg);
+background-image: url(tony1.jpg);
 background-repeat: no;
         text-align: center;
         padding-bottom: 20px;
         padding-top: 25px;
       }
-
       table {
         margin-top: 26px;
         width: 100%;
@@ -365,17 +464,13 @@ background-repeat: no;
       thead {
         font-weight: bold;
       }
-
       tbody {
         text-align: center;
       }
-
       
-@media screen and (max-width: 600px) {
         table thead {
           display: none;
         }
-
         table td {
           display: block;
           position: relative;
@@ -385,7 +480,6 @@ background-repeat: no;
           text-align: left;
           background: #e9e9e9;
         }
-
         table td:before {
           content: attr(data-th) " :";
           display: inline-block;
@@ -398,7 +492,6 @@ background-repeat: no;
           bottom: 0;
           width: 33%;
           max-height: 100%;
-
           font-size: 16px;
           font-weight: 300;
           padding-left: 13px;
@@ -406,14 +499,11 @@ background-repeat: no;
         }
       }
       
-@media screen and (min-width: 600px) {
           #headline {
-            font-size: 22px;
-	padding: 30px 1%;
+	font-size: 22px;
+            padding: 30px 2%;
 	padding-top: 30px;
-	padding-right: -20px;
           }
-
 #footline {
             padding: 1px 22%;
           }
@@ -423,26 +513,32 @@ background-repeat: no;
             margin: auto;
             max-width: 800px;
           }
-
           #headline #blurb {
             float: left; 
             font-weight: 200;
-            width: 50%;
+            width: 80%;
             font-size: 18px;
             font-family: 'Didact Gothic', sans-serif;
 	box-sizing: border-box;
-            padding-right: 20px;
+            margin: auto;
           }
-
           #headline br {
             clear: both;
           }
-
+         @media  (max-width: 60em) {
           #headline #register {
-            float:right;
+            margin: auto;
             font-family: 'Didact Gothic', sans-serif;
 	padding: 20px;
-            width: 50%;
+            width: 80%;
+            box-sizing: border-box;
+            font-weight: 300;
+          }}
+  #headline #register {
+           margin: auto;
+            font-family: 'Didact Gothic', sans-serif;
+	padding: 15px;
+            width: 80%;
             box-sizing: border-box;
             font-weight: 300;
           }
@@ -456,22 +552,19 @@ background-repeat: no;
             box-sizing: border-box;
             padding-right: 10px;
           }
-
           #footline br {
             clear: both;
           }
-
           #footline #register {
             float:left;
             padding: 20px;
-		 margin-top: 56px;
+		 margin-top: 120px;
 	font-family: 'Didact Gothic', sans-serif;
-            width: 50%;
+            width: 40%;
             box-sizing: border-box;
             font-weight: 300;
           }
           
-
            #section1 #section2, #section3, #section4, #section5   {
             
 box-sizing: border-box;
@@ -495,7 +588,6 @@ box-sizing: border-box;
             width: 50%;
             float: right;
           }
-
           #section1 br {
             clear: both;
           }
@@ -506,9 +598,7 @@ box-sizing: border-box;
             box-sizing: border-box;
             border-radius: 50% 50%;
             box-shadow: black 0px 0px 5px;
-
 	
-
  #section4 div img {
             width: 30%;
 	
@@ -517,62 +607,91 @@ box-sizing: border-box;
             border-radius: 50% 50%;
             box-shadow: black 0px 0px 5px;
        
-
           }
         }
-
     </style>
 <body>
+	
+	<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+	<script>
+function openNav() {
+    document.getElementById("myNav").style.height = "100%";
+}
+
+function closeNav() {
+    document.getElementById("myNav").style.height = "0%";
+}
+</script>
+	
+	<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="padding-top:50px;">&times;</a>
+  <div class="overlay-content">
+    <a href="index.html">Home</a>
+    <a href="lessons.html" style="color: #d8d8d8;">Beginner<br> Motorcycle Lessons</a>
+    <a href="guide.html">New Rider's <br>Video Guide</a>
+    <a href="aboutus.html">About Us</a>
+	  <a href="contact.html">Contact</a>
+  </div>
+</div>
+	
 <div id="headline">
-      
-        <header>
-          <h1>New Rider's Video Guide</h1>
-          <p style="font-weight: italic; font-size: 30px; color:white;"><i>Everything you need to know about motorcycles</i> </p>
+      <header>
+       <h1>Contact</h1><br>
+          <p style="font-weight: italic; font-size: 30px; color:white;"><i>Text Us</i> </p>
         </header>
         <div id="blurb">
-          <p>There's a lot of horrible information that confuses many new riders. From Aunt Sheila (whose ex-boyfriend died on a Harley), the internet, and even to experienced riders there is tons of bad advice given to new riders on daily basis. This guide will be the definitive resource for new riders that addresses both sides of some controversial topics in the motorcycle world.</p>
-          <p>Along with explanations given in each video, there will be an more indepth discussion about the topic at hand below written in article form. Most of you are too lazy to read (hence the videos) but we suggest you bust out your hooked on phonics and get to reading everything as well if you're serious about motorcycles.</p>
+         <p style="font-family: 'Didact Gothic', sans-serif; font-size: 20px; color:white;"><i style="font-size: 35px;"></i>To set up an appointment for private lessons visit <a href="lessons.html">here</a> and text us based on your location.</p>
+<p style="font-weight: italic; font-size: 20px; color:white;">San Diego: (619) 736-1683</p>
+<p style="font-weight: italic; font-size: 20px; color:white;">New York: (516) 413-1831</p>
+<p style="font-weight: italic; font-size: 20px; color:white;"><i></i></p> 
 
-	<p>Enjoy</p>
           
         </div> <div id="headline">
-       <center><p>What will be covered</p></center><ul>
-  <li>Dangers of Riding</li><br>
-<li>Overview of Process</li><br>
-  <li>How to Learn to Ride</li><br>
-<li>Riding Gear</li><br>
-<li>Sportbikes vs Cruisers</li><br>
-  <li>300cc vs 600cc as First Bike</li><br>
-<li>Best First Bike</li><br>
-<li>Where to Buy a Bike</li><br>
-  <li>Costs to Get Started</li><br>
-<li>Common New Rider Mistakes</li><br>
-
-</ul>
-        <br>
+     
+        <br><br><br><br>
       </div>
     </div>
     </div>
 
 <div id="section4">
       <br>
-        <h2 style="color:black;">Guide Coming Soon</h2><br><br><br>
-        <p style="color:black;">We are still in the process of developing this video series, it will be up shortly. Feel free to contact us for any help regarding advice for riding in the meantime.</p>
+        <h2 style="color:black;">Follow Us</h2><br>
+    <center>  <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:300px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BOfjG4igytA/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">😱😱😱 Be careful when you lanesplit! Always predict other cars&#39; movements and prepare accordingly!</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A video posted by SAMIN (@saminmotor) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-12-26T19:59:00+00:00">Dec 26, 2016 at 11:59am PST</time></p></div></blockquote>
+	    <script async defer src="//platform.instagram.com/en_US/embeds.js"></script></center><p style="color:black;">Join our community of riders by following us on Instagram! We post daily motorcycle content including everything from educational motorcycle crashes to featuring our very own riders. Tag us in a picture of you and your bike and we'll feature you!
+
+
+
+</p>
+        <br><br><br><br><br><br><br><br><br><br><br>
         <br>
+
       </div>
     </div>
 
 
        </div>
-    </main>
+       
+      </div>
+    </div>
 
-  <div id="section1">     <div class="container">
-  <center>         <center style="font-size: 12px;"> <a href="#"><img src="facebook.png"></a> &nbsp;&nbsp; <a href="#"><img src="instagram.png"></a><font color="white"><br>Copyright &copy; 2016 SAMIN, LLC | <a href="#"><font color="white">Terms of Use</a> | <a href="#"><font color="white">Privacy Policy</a></font> </center>    </div>    </div>
     </footer>
 
+       </div>
+    </main>
+  <div id="section1">     <div class="container">
+  <center>         <center style="font-size: 12px;"> <a href="https://www.facebook.com/SAMIN-1560869720595387/"><img src="facebook.png"></a> &nbsp;&nbsp; <a href="https://www.instagram.com/saminmotor/"><img src="instagram.png"></a><font color="white"><br>Copyright &copy; 2017 SAMIN, LLC | <a href="#"><font color="white">Terms of Use</a> | <a href="#"><font color="white">Privacy Policy</a></font> </center>    </div>    </div>
+    </footer>
     <script type="text/javascript" src="../dist/headhesive.js"></script>
     <script>
-
         // Set options
         var options = {
             offset: '#showHere',
@@ -583,10 +702,8 @@ box-sizing: border-box;
                 unstick: 'banner--unstick'
             }
         };
-
         // Initialise with options
         var banner = new Headhesive('.banner', options);
-
         // Headhesive destroy
         // banner.destroy();
     </script>
@@ -595,10 +712,8 @@ box-sizing: border-box;
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
   ga('create', 'UA-85370015-1', 'auto');
   ga('send', 'pageview');
-
 </script>
 </body>
 </html>
